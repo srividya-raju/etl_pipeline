@@ -1,0 +1,32 @@
+[2025-11-26T21:16:26.333+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-26T21:16:26.360+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_weather_dag.load_weather_task scheduled__2025-11-26T20:00:00+00:00 [queued]>
+[2025-11-26T21:16:26.369+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_weather_dag.load_weather_task scheduled__2025-11-26T20:00:00+00:00 [queued]>
+[2025-11-26T21:16:26.370+0000] {taskinstance.py:2865} INFO - Starting attempt 4 of 4
+[2025-11-26T21:16:26.820+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): load_weather_task> on 2025-11-26 20:00:00+00:00
+[2025-11-26T21:16:26.850+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=2019) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-26T21:16:26.852+0000] {standard_task_runner.py:72} INFO - Started process 2021 to run task
+[2025-11-26T21:16:26.849+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fetch_weather_dag', 'load_weather_task', 'scheduled__2025-11-26T20:00:00+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/fetch_weather_dag.py', '--cfg-path', '/tmp/tmpm3dstp8k']
+[2025-11-26T21:16:26.853+0000] {standard_task_runner.py:105} INFO - Job 35: Subtask load_weather_task
+[2025-11-26T21:16:28.128+0000] {task_command.py:467} INFO - Running <TaskInstance: fetch_weather_dag.load_weather_task scheduled__2025-11-26T20:00:00+00:00 [running]> on host 7fa3cbb25d21
+[2025-11-26T21:16:29.084+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_weather_dag' AIRFLOW_CTX_TASK_ID='load_weather_task' AIRFLOW_CTX_EXECUTION_DATE='2025-11-26T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-26T20:00:00+00:00'
+[2025-11-26T21:16:29.086+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-26T21:16:29.522+0000] {logging_mixin.py:190} INFO -                   timestamp  temperature_2m  ...  wind_speed_10m  outlet_id
+0 2023-01-01 00:00:00+00:00           9.522  ...        2.160000          1
+1 2023-01-01 01:00:00+00:00           9.722  ...        1.484318          1
+2 2023-01-01 02:00:00+00:00          10.322  ...        3.219938          1
+3 2023-01-01 03:00:00+00:00          10.322  ...        1.018234          1
+4 2023-01-01 04:00:00+00:00          11.372  ...        6.162207          1
+
+[5 rows x 5 columns]
+[2025-11-26T21:16:29.524+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-11-26T21:16:29.525+0000] {base.py:84} INFO - Retrieving connection '***_dbt'
+[2025-11-26T21:16:29.527+0000] {base.py:84} INFO - Retrieving connection '***_dbt'
+[2025-11-26T21:16:49.609+0000] {job.py:229} INFO - Heartbeat recovered after 17.65 seconds
+[2025-11-26T21:17:13.156+0000] {job.py:229} INFO - Heartbeat recovered after 28.17 seconds
+[2025-11-26T21:17:18.337+0000] {job.py:229} INFO - Heartbeat recovered after 21.81 seconds
+[2025-11-26T21:17:41.662+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-11-26T21:17:41.679+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-26T21:17:41.680+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fetch_weather_dag, task_id=load_weather_task, run_id=scheduled__2025-11-26T20:00:00+00:00, execution_date=20251126T200000, start_date=20251126T211626, end_date=20251126T211741
+[2025-11-26T21:17:41.763+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-26T21:17:41.795+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-26T21:17:41.801+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

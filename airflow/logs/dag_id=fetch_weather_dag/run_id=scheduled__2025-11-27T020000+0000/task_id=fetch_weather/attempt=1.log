@@ -1,0 +1,71 @@
+[2025-11-27T03:00:05.996+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-27T03:00:06.018+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_weather_dag.fetch_weather scheduled__2025-11-27T02:00:00+00:00 [queued]>
+[2025-11-27T03:00:06.027+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_weather_dag.fetch_weather scheduled__2025-11-27T02:00:00+00:00 [queued]>
+[2025-11-27T03:00:06.028+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-27T03:00:06.043+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): fetch_weather> on 2025-11-27 02:00:00+00:00
+[2025-11-27T03:00:06.056+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=9411) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-27T03:00:06.058+0000] {standard_task_runner.py:72} INFO - Started process 9413 to run task
+[2025-11-27T03:00:06.056+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fetch_weather_dag', 'fetch_weather', 'scheduled__2025-11-27T02:00:00+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/fetch_weather_dag.py', '--cfg-path', '/tmp/tmpt6g38fzr']
+[2025-11-27T03:00:06.059+0000] {standard_task_runner.py:105} INFO - Job 49: Subtask fetch_weather
+[2025-11-27T03:00:06.146+0000] {task_command.py:467} INFO - Running <TaskInstance: fetch_weather_dag.fetch_weather scheduled__2025-11-27T02:00:00+00:00 [running]> on host 7fa3cbb25d21
+[2025-11-27T03:00:06.373+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_weather' AIRFLOW_CTX_EXECUTION_DATE='2025-11-27T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-27T02:00:00+00:00'
+[2025-11-27T03:00:06.376+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-27T03:00:06.380+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 1: (40.76, -73.86)
+[2025-11-27T03:00:06.405+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 2: (0.0, 0.0)
+[2025-11-27T03:00:06.410+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 3: (40.81, -73.91)
+[2025-11-27T03:00:06.415+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 4: (40.72, -73.98)
+[2025-11-27T03:00:06.420+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 5: (40.71, -73.87)
+[2025-11-27T03:00:06.424+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 6: (40.79, -73.89)
+[2025-11-27T03:00:06.429+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 7: (40.7, -73.85)
+[2025-11-27T03:00:06.433+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 8: (40.82, -73.97)
+[2025-11-27T03:00:06.438+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 9: (40.73, -73.97)
+[2025-11-27T03:00:06.442+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 10: (40.75, -73.92)
+[2025-11-27T03:00:06.447+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 11: (40.76, -73.96)
+[2025-11-27T03:00:06.450+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 12: (40.79, -73.98)
+[2025-11-27T03:00:06.454+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 13: (40.74, -73.95)
+[2025-11-27T03:00:06.457+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 14: (40.77, -73.88)
+[2025-11-27T03:00:06.461+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 15: (40.73, -73.92)
+[2025-11-27T03:00:06.465+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 16: (40.79, -73.99)
+[2025-11-27T03:00:06.468+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 17: (40.79, -73.97)
+[2025-11-27T03:00:06.472+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 18: (40.71, -73.86)
+[2025-11-27T03:00:06.475+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 19: (40.84, -73.88)
+[2025-11-27T03:00:06.481+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 20: (40.75, -73.99)
+[2025-11-27T03:00:06.485+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 21: (40.8, -73.93)
+[2025-11-27T03:00:06.489+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 22: (40.72, -73.93)
+[2025-11-27T03:00:06.494+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 23: (0.0, 0.0)
+[2025-11-27T03:00:06.498+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 24: (40.71, -73.86)
+[2025-11-27T03:00:06.502+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 25: (40.74, -73.9)
+[2025-11-27T03:00:06.506+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 26: (40.75, -73.92)
+[2025-11-27T03:00:06.510+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 27: (40.78, -73.97)
+[2025-11-27T03:00:06.515+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 28: (40.85, -73.88)
+[2025-11-27T03:00:06.520+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 29: (0.0, 0.0)
+[2025-11-27T03:00:06.523+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 30: (40.84, -73.87)
+[2025-11-27T03:00:06.528+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 31: (40.79, -73.86)
+[2025-11-27T03:00:06.532+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 32: (40.71, -73.97)
+[2025-11-27T03:00:06.536+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 33: (40.71, -73.95)
+[2025-11-27T03:00:06.540+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 34: (40.76, -73.96)
+[2025-11-27T03:00:06.544+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 35: (40.82, -73.95)
+[2025-11-27T03:00:06.548+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 36: (0.0, 0.0)
+[2025-11-27T03:00:06.552+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 37: (40.74, -73.92)
+[2025-11-27T03:00:06.556+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 38: (40.72, -73.88)
+[2025-11-27T03:00:06.560+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 39: (40.71, -73.85)
+[2025-11-27T03:00:06.564+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 40: (40.82, -73.97)
+[2025-11-27T03:00:06.569+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 41: (0.0, 0.0)
+[2025-11-27T03:00:06.573+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 42: (40.7, -73.88)
+[2025-11-27T03:00:06.577+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 43: (40.81, -73.89)
+[2025-11-27T03:00:06.581+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 44: (40.82, -73.99)
+[2025-11-27T03:00:06.585+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 45: (40.75, -73.98)
+[2025-11-27T03:00:06.589+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 46: (40.83, -73.91)
+[2025-11-27T03:00:06.593+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 47: (40.75, -73.99)
+[2025-11-27T03:00:06.597+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 48: (40.75, -73.95)
+[2025-11-27T03:00:06.601+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 49: (40.81, -73.9)
+[2025-11-27T03:00:08.404+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 50: (40.83, -73.93)
+[2025-11-27T03:00:09.207+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-11-27T03:00:09.208+0000] {base.py:84} INFO - Retrieving connection '***_dbt'
+[2025-11-27T03:00:09.211+0000] {base.py:84} INFO - Retrieving connection '***_dbt'
+[2025-11-27T03:01:13.868+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-11-27T03:01:14.033+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-27T03:01:14.038+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fetch_weather_dag, task_id=fetch_weather, run_id=scheduled__2025-11-27T02:00:00+00:00, execution_date=20251127T020000, start_date=20251127T030006, end_date=20251127T030114
+[2025-11-27T03:01:14.200+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-27T03:01:14.412+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-27T03:01:14.418+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

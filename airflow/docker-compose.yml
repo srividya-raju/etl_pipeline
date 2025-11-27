@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  airflow-postgres:
+    image: postgres:15
+    container_name: airflow-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "5433:5432"
+    volumes:
+      - airflow_postgres_data:/var/lib/postgresql/data
+    networks:
+      airflow-dbt-network: {}
+
+  airflow:
+    image: apache/airflow:2.10.2
+    container_name: airflow
+    networks:
+      airflow-dbt-network: 
+
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres:5432/airflow
+      AIRFLOW_CONN_POSTGRES_DBT: postgresql+psycopg2://postgres:postgres@db-postgres:5432/mydb
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - "C:/Users/sukanya raju/.dbt:/opt/airflow/.dbt"
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - airflow-postgres
+
+    command: >
+      bash -c "
+        until pg_isready -h airflow-postgres -p 5432 -U airflow; do
+          echo 'Waiting for Postgres...'
+          sleep 2
+        done
+
+        echo 'Initializing Airflow DB...'
+        airflow db init
+
+        echo 'Upgrading Airflow DB...'
+        airflow db upgrade
+
+        echo 'Creating admin user...'
+        airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true
+
+        echo 'Starting scheduler and webserver...'
+        airflow scheduler &
+        exec airflow webserver
+      "
+
+    
+
+volumes:
+  airflow_postgres_data:
+
+networks:
+  airflow-dbt-network:
+    driver: bridge

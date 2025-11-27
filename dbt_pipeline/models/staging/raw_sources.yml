@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: dbttest
+    database: mydb
+    schema: dbttest
+    tables:
+      - name: api_data
+      - name: country_code_list
+  - name: datalake
+    database: mydb
+    schema: datalake
+    tables:
+      - name: listing
+        columns:
+          - name: id
+      - name: orders_daily
+      - name: orders
+      - name: org 
+      - name: outlet
+      - name: platform
+      - name: rank
+      - name: ratings_agg
+
+    
+

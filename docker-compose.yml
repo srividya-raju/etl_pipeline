@@ -1,0 +1,23 @@
+
+services:
+  db-postgres:
+    image: postgres:15
+    container_name: db-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_postgres_data:/var/lib/postgresql/data
+    networks:
+      - airflow-dbt-network
+
+volumes:
+  db_postgres_data:
+
+networks:
+  airflow-dbt-network:
+

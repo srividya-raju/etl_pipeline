@@ -1,0 +1,12 @@
+version: 2
+data_tests:
+  - name: orders_date_range
+    description: >
+      order placed date should be less than future date
+  - name: negative_orders_test
+    description: >
+      Monthly orders should be greater than or min of 100
+  - name: rating_range_validation
+    description: >
+      rating range should be between 0 and 5
+ 

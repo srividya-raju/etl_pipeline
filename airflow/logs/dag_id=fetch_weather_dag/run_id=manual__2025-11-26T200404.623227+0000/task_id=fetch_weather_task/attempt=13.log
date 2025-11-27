@@ -1,0 +1,70 @@
+[2025-11-26T20:44:51.805+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-26T20:44:51.828+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_weather_dag.fetch_weather_task manual__2025-11-26T20:04:04.623227+00:00 [queued]>
+[2025-11-26T20:44:51.837+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_weather_dag.fetch_weather_task manual__2025-11-26T20:04:04.623227+00:00 [queued]>
+[2025-11-26T20:44:51.838+0000] {taskinstance.py:2865} INFO - Starting attempt 13 of 13
+[2025-11-26T20:44:51.857+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): fetch_weather_task> on 2025-11-26 20:04:04.623227+00:00
+[2025-11-26T20:44:51.868+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fetch_weather_dag', 'fetch_weather_task', 'manual__2025-11-26T20:04:04.623227+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/fetch_weather_dag.py', '--cfg-path', '/tmp/tmpwvuat_95']
+[2025-11-26T20:44:51.872+0000] {standard_task_runner.py:105} INFO - Job 25: Subtask fetch_weather_task
+[2025-11-26T20:44:51.872+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1279) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-26T20:44:51.875+0000] {standard_task_runner.py:72} INFO - Started process 1281 to run task
+[2025-11-26T20:44:51.960+0000] {task_command.py:467} INFO - Running <TaskInstance: fetch_weather_dag.fetch_weather_task manual__2025-11-26T20:04:04.623227+00:00 [running]> on host 7fa3cbb25d21
+[2025-11-26T20:44:52.065+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_weather_task' AIRFLOW_CTX_EXECUTION_DATE='2025-11-26T20:04:04.623227+00:00' AIRFLOW_CTX_TRY_NUMBER='13' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-26T20:04:04.623227+00:00'
+[2025-11-26T20:44:52.067+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-26T20:44:52.095+0000] {logging_mixin.py:190} INFO - cols:
+[2025-11-26T20:44:52.098+0000] {logging_mixin.py:190} INFO - Index(['outlet_id', 'latitude', 'longitude'], dtype='object')
+[2025-11-26T20:44:52.101+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 1: (40.76, -73.86)
+[2025-11-26T20:44:53.665+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 2: (0.00, 0.00)
+[2025-11-26T20:44:54.028+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 3: (40.81, -73.91)
+[2025-11-26T20:45:01.454+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 4: (40.72, -73.98)
+[2025-11-26T20:45:01.829+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 5: (40.71, -73.87)
+[2025-11-26T20:45:07.478+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 6: (40.79, -73.89)
+[2025-11-26T20:45:07.570+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 7: (40.70, -73.85)
+[2025-11-26T20:45:07.668+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 8: (40.82, -73.97)
+[2025-11-26T20:45:07.781+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 9: (40.73, -73.97)
+[2025-11-26T20:45:07.981+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 10: (40.75, -73.92)
+[2025-11-26T20:45:12.912+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 11: (40.76, -73.96)
+[2025-11-26T20:45:13.049+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 12: (40.79, -73.98)
+[2025-11-26T20:45:13.145+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 13: (40.74, -73.95)
+[2025-11-26T20:45:13.237+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 14: (40.77, -73.88)
+[2025-11-26T20:45:13.324+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 15: (40.73, -73.92)
+[2025-11-26T20:45:13.429+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 16: (40.79, -73.99)
+[2025-11-26T20:45:13.530+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 17: (40.79, -73.97)
+[2025-11-26T20:45:13.638+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 18: (40.71, -73.86)
+[2025-11-26T20:45:13.781+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 19: (40.84, -73.88)
+[2025-11-26T20:45:21.736+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 20: (40.75, -73.99)
+[2025-11-26T20:45:21.867+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 21: (40.80, -73.93)
+[2025-11-26T20:45:21.993+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 22: (40.72, -73.93)
+[2025-11-26T20:45:22.089+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 23: (0.00, 0.00)
+[2025-11-26T20:45:22.096+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 24: (40.71, -73.86)
+[2025-11-26T20:45:22.104+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 25: (40.74, -73.90)
+[2025-11-26T20:45:22.217+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 26: (40.75, -73.92)
+[2025-11-26T20:45:22.223+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 27: (40.78, -73.97)
+[2025-11-26T20:45:22.321+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 28: (40.85, -73.88)
+[2025-11-26T20:45:27.262+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 29: (0.00, 0.00)
+[2025-11-26T20:45:27.273+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 30: (40.84, -73.87)
+[2025-11-26T20:45:27.356+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 31: (40.79, -73.86)
+[2025-11-26T20:45:27.442+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 32: (40.71, -73.97)
+[2025-11-26T20:45:27.536+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 33: (40.71, -73.95)
+[2025-11-26T20:45:27.629+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 34: (40.76, -73.96)
+[2025-11-26T20:45:27.632+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 35: (40.82, -73.95)
+[2025-11-26T20:45:27.751+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 36: (0, 0)
+[2025-11-26T20:45:27.847+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 37: (40.74, -73.92)
+[2025-11-26T20:45:27.944+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 38: (40.72, -73.88)
+[2025-11-26T20:45:28.045+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 39: (40.71, -73.85)
+[2025-11-26T20:45:28.148+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 40: (40.82, -73.97)
+[2025-11-26T20:45:28.158+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 41: (0, 0)
+[2025-11-26T20:45:28.167+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 42: (40.70, -73.88)
+[2025-11-26T20:45:28.267+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 43: (40.81, -73.89)
+[2025-11-26T20:45:28.344+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 44: (40.82, -73.99)
+[2025-11-26T20:45:28.442+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 45: (40.75, -73.98)
+[2025-11-26T20:45:28.557+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 46: (40.83, -73.91)
+[2025-11-26T20:45:28.681+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 47: (40.75, -73.99)
+[2025-11-26T20:45:28.686+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 48: (40.75, -73.95)
+[2025-11-26T20:45:28.812+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 49: (40.81, -73.90)
+[2025-11-26T20:45:28.919+0000] {logging_mixin.py:190} INFO - Fetching weather for outlet 50: (40.83, -73.93)
+[2025-11-26T20:45:31.051+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-11-26T20:45:31.184+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-26T20:45:31.185+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fetch_weather_dag, task_id=fetch_weather_task, run_id=manual__2025-11-26T20:04:04.623227+00:00, execution_date=20251126T200404, start_date=20251126T204451, end_date=20251126T204531
+[2025-11-26T20:45:31.552+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-26T20:45:31.595+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-26T20:45:31.600+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

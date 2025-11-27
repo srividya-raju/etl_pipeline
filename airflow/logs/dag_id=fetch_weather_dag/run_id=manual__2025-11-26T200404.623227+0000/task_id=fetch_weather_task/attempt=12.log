@@ -1,0 +1,122 @@
+[2025-11-26T20:41:54.447+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-26T20:41:54.472+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_weather_dag.fetch_weather_task manual__2025-11-26T20:04:04.623227+00:00 [queued]>
+[2025-11-26T20:41:54.484+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_weather_dag.fetch_weather_task manual__2025-11-26T20:04:04.623227+00:00 [queued]>
+[2025-11-26T20:41:54.484+0000] {taskinstance.py:2865} INFO - Starting attempt 12 of 12
+[2025-11-26T20:41:54.506+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): fetch_weather_task> on 2025-11-26 20:04:04.623227+00:00
+[2025-11-26T20:41:54.521+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fetch_weather_dag', 'fetch_weather_task', 'manual__2025-11-26T20:04:04.623227+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/fetch_weather_dag.py', '--cfg-path', '/tmp/tmpibv1jct4']
+[2025-11-26T20:41:54.524+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1205) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-26T20:41:54.525+0000] {standard_task_runner.py:105} INFO - Job 23: Subtask fetch_weather_task
+[2025-11-26T20:41:54.526+0000] {standard_task_runner.py:72} INFO - Started process 1207 to run task
+[2025-11-26T20:41:54.617+0000] {task_command.py:467} INFO - Running <TaskInstance: fetch_weather_dag.fetch_weather_task manual__2025-11-26T20:04:04.623227+00:00 [running]> on host 7fa3cbb25d21
+[2025-11-26T20:41:54.741+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_weather_task' AIRFLOW_CTX_EXECUTION_DATE='2025-11-26T20:04:04.623227+00:00' AIRFLOW_CTX_TRY_NUMBER='12' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-26T20:04:04.623227+00:00'
+[2025-11-26T20:41:54.743+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-26T20:41:54.774+0000] {logging_mixin.py:190} INFO - [(1, Decimal('40.76'), Decimal('-73.86')), (2, Decimal('0.00'), Decimal('0.00')), (3, Decimal('40.81'), Decimal('-73.91')), (4, Decimal('40.72'), Decimal('-73.98')), (5, Decimal('40.71'), Decimal('-73.87')), (6, Decimal('40.79'), Decimal('-73.89')), (7, Decimal('40.70'), Decimal('-73.85')), (8, Decimal('40.82'), Decimal('-73.97')), (9, Decimal('40.73'), Decimal('-73.97')), (10, Decimal('40.75'), Decimal('-73.92')), (11, Decimal('40.76'), Decimal('-73.96')), (12, Decimal('40.79'), Decimal('-73.98')), (13, Decimal('40.74'), Decimal('-73.95')), (14, Decimal('40.77'), Decimal('-73.88')), (15, Decimal('40.73'), Decimal('-73.92')), (16, Decimal('40.79'), Decimal('-73.99')), (17, Decimal('40.79'), Decimal('-73.97')), (18, Decimal('40.71'), Decimal('-73.86')), (19, Decimal('40.84'), Decimal('-73.88')), (20, Decimal('40.75'), Decimal('-73.99')), (21, Decimal('40.80'), Decimal('-73.93')), (22, Decimal('40.72'), Decimal('-73.93')), (23, Decimal('0.00'), Decimal('0.00')), (24, Decimal('40.71'), Decimal('-73.86')), (25, Decimal('40.74'), Decimal('-73.90')), (26, Decimal('40.75'), Decimal('-73.92')), (27, Decimal('40.78'), Decimal('-73.97')), (28, Decimal('40.85'), Decimal('-73.88')), (29, Decimal('0.00'), Decimal('0.00')), (30, Decimal('40.84'), Decimal('-73.87')), (31, Decimal('40.79'), Decimal('-73.86')), (32, Decimal('40.71'), Decimal('-73.97')), (33, Decimal('40.71'), Decimal('-73.95')), (34, Decimal('40.76'), Decimal('-73.96')), (35, Decimal('40.82'), Decimal('-73.95')), (36, Decimal('0'), Decimal('0')), (37, Decimal('40.74'), Decimal('-73.92')), (38, Decimal('40.72'), Decimal('-73.88')), (39, Decimal('40.71'), Decimal('-73.85')), (40, Decimal('40.82'), Decimal('-73.97')), (41, Decimal('0'), Decimal('0')), (42, Decimal('40.70'), Decimal('-73.88')), (43, Decimal('40.81'), Decimal('-73.89')), (44, Decimal('40.82'), Decimal('-73.99')), (45, Decimal('40.75'), Decimal('-73.98')), (46, Decimal('40.83'), Decimal('-73.91')), (47, Decimal('40.75'), Decimal('-73.99')), (48, Decimal('40.75'), Decimal('-73.95')), (49, Decimal('40.81'), Decimal('-73.90')), (50, Decimal('40.83'), Decimal('-73.93'))]
+[2025-11-26T20:41:54.777+0000] {logging_mixin.py:190} INFO - cols:
+[2025-11-26T20:41:54.778+0000] {logging_mixin.py:190} INFO - RangeIndex(start=0, stop=3, step=1)
+[2025-11-26T20:41:54.780+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/fetch_weather_dag.py", line 115, in fetch_weather
+    outlet_id = row["outlet_id"]
+                ~~~^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1040, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1156, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'outlet_id'
+[2025-11-26T20:41:54.805+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=fetch_weather_dag, task_id=fetch_weather_task, run_id=manual__2025-11-26T20:04:04.623227+00:00, execution_date=20251126T200404, start_date=20251126T204154, end_date=20251126T204154
+[2025-11-26T20:41:54.821+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-26T20:41:54.824+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 23 for task fetch_weather_task ('outlet_id'; 1207)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/fetch_weather_dag.py", line 115, in fetch_weather
+    outlet_id = row["outlet_id"]
+                ~~~^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1040, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1156, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'outlet_id'
+[2025-11-26T20:41:54.864+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-11-26T20:41:54.943+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-26T20:41:54.960+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

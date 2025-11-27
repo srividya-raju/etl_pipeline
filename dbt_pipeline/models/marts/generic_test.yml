@@ -1,0 +1,38 @@
+models:
+  - name: Reporting_table
+    columns:
+    - name: country
+      tests:
+        - relationships:
+            arguments:
+              to: ref('country_code_list')
+              field: country_code
+    - name: listing_id
+      data_tests:
+        - not_null
+    - name: order_id 
+      data_tests:
+        - unique
+        - not_null
+        - relationships:
+            arguments: 
+              to: ref('int_orders')
+              field: order_id
+    - name: order_status
+      data_tests:
+        - accepted_values:
+            values: ["completed","cancelled","refunded","pending"]
+    - name: platform_group 
+      data_tests:
+        - not_null
+        - relationships:
+            arguments: 
+              to: ref('int_platform')
+              field: platform_group
+    - name: platform_name 
+      data_tests:
+        - not_null
+        - relationships:
+            arguments: 
+              to: ref('int_platform')
+              field: platform_name
